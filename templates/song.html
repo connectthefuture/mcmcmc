@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Rap Lyrics</title>
+<body>
+    {% for stanza in stanzas %}
+        <p>{{ "<br />".join(stanza) | safe }}</p>
+        {% if loop.first %}
+            <p>Chorus:<br />
+            {{ "<br />".join(chorus) | safe }}</p>
+        {% else %}
+            <p>Chorus</p>
+        {% endif %}
+    {% endfor %}
+</body>
