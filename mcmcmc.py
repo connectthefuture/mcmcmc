@@ -116,10 +116,11 @@ def generate_stanza(line_length, rhyme_level, num_couplets):
         lines.append(line_2.capitalize())
     return lines
    
-
 @app.route("/")
 def home():
-    return "<br />".join(generate_stanza(10, 2, 3))
+    stanzas = [generate_stanza(7, 2, 3) for x in range(3)]
+    chorus = [generate_stanza(7, 2, 2)]
+    return "<br/><br/>".join(["<br/>".join(x) for x in stanzas + chorus])
     
     
 if __name__ == "__main__":
