@@ -6,7 +6,7 @@ Werkzeug==0.9.4
 argparse==1.2.1
 gunicorn==18.0
 itsdangerous==0.24
-nltk==2.0.4
+nltk==3.4.5
 pyttsx==1.1
 requests==2.2.1
 wsgiref==0.1.2
